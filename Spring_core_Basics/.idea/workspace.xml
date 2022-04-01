@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f250042-64e3-475d-8c3b-e0859f610fc1" name="Changes" comment="회원 도메인 개발">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/appConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/xml/XmlAppContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/beandefinition/BeanDefinitionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -42,8 +41,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -117,7 +116,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.XmlAppContext">
+  <component name="RunManager" selected="JUnit.BeanDefinitionTest">
     <configuration name="ApplicationContextBasicFindTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <extension name="coverage">
@@ -148,21 +147,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationContextInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hello.core.beanfind.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hello.core.beanfind" />
-      <option name="MAIN_CLASS_NAME" value="hello.core.beanfind.ApplicationContextInfoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApplicationContextSameBeanFIndTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <extension name="coverage">
@@ -173,6 +157,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="hello.core.beanfind" />
       <option name="MAIN_CLASS_NAME" value="hello.core.beanfind.ApplicationContextSameBeanFIndTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanDefinitionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.core.beandefinition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.core.beandefinition" />
+      <option name="MAIN_CLASS_NAME" value="hello.core.beandefinition.BeanDefinitionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BeanDefinitionTest" />
         <item itemvalue="JUnit.XmlAppContext" />
         <item itemvalue="JUnit.ApplicationContextExtendsFindTest" />
         <item itemvalue="JUnit.ApplicationContextSameBeanFIndTest" />
         <item itemvalue="JUnit.ApplicationContextBasicFindTest" />
-        <item itemvalue="JUnit.ApplicationContextInfoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +236,7 @@
       <workItem from="1648524223920" duration="3237000" />
       <workItem from="1648714691016" duration="1366000" />
       <workItem from="1648789907972" duration="29000" />
-      <workItem from="1648796196821" duration="398000" />
+      <workItem from="1648796196821" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="회원 도메인 개발">
       <created>1647574394840</created>
