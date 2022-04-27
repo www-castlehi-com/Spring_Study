@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f250042-64e3-475d-8c3b-e0859f610fc1" name="Changes" comment="회원 도메인 개발">
-      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/Filter/ComponentFilterAppConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/Filter/MyExcludeComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/Filter/MyIncludeComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/Filter/beanA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/Filter/beanB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hello/core/bean/AutoAppConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hello/core/scan/AutoAppConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/hello/core/AutoAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hello/core/AutoAppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/AutoAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/AutoAppConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ComponentFilterAppConfigTest">
+  <component name="RunManager" selected="Spring Boot.CoreApplication (1)">
     <configuration name="AutoAppConfigTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <extension name="coverage">
@@ -218,8 +214,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ComponentFilterAppConfigTest" />
         <item itemvalue="JUnit.AutoAppConfigTest" />
+        <item itemvalue="JUnit.ComponentFilterAppConfigTest" />
         <item itemvalue="JUnit.ConfigurationSingletonTest" />
         <item itemvalue="JUnit.StatefulServiceTest" />
         <item itemvalue="JUnit.SingletonTest.springContainer" />
@@ -252,7 +248,7 @@
       <workItem from="1649057363520" duration="94000" />
       <workItem from="1650957702974" duration="2710000" />
       <workItem from="1651027881097" duration="12000" />
-      <workItem from="1651038336844" duration="3046000" />
+      <workItem from="1651038336844" duration="3941000" />
     </task>
     <task id="LOCAL-00001" summary="회원 도메인 개발">
       <created>1647574394840</created>
