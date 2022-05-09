@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.core.singleton.StatefulServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-09T06:07:34" hostname="seongha-Macmini.local" time="0.009">
+  <properties/>
+  <testcase name="statefulServiceSingleton()" classname="hello.core.singleton.StatefulServiceTest" time="0.009"/>
+  <system-out><![CDATA[name = userA price = 10000
+name = userB price = 20000
+userAPrice = 10000
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

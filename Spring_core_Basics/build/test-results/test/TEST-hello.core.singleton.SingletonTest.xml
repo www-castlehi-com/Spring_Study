@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.core.singleton.SingletonTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-05-09T06:07:34" hostname="seongha-Macmini.local" time="0.014">
+  <properties/>
+  <testcase name="스프링 없는 순수한 DI 컨테이너" classname="hello.core.singleton.SingletonTest" time="0.004"/>
+  <testcase name="싱글톤 패턴을 적용한 객체 사용" classname="hello.core.singleton.SingletonTest" time="0.001"/>
+  <testcase name="스프링 컨테이너와 싱글톤" classname="hello.core.singleton.SingletonTest" time="0.009"/>
+  <system-out><![CDATA[call AppConfig.memberService
+call AppConfig.memberRepository
+call AppConfig.memberService
+call AppConfig.memberRepository
+memberService = hello.core.member.MemberServiceImpl@3d53e6f7
+memberService1 = hello.core.member.MemberServiceImpl@1de4bee0
+singletonService = hello.core.singleton.SingletonService@3ece79fe
+singletonService1 = hello.core.singleton.SingletonService@3ece79fe
+call AppConfig.memberService
+call AppConfig.memberRepository
+call AppConfig.orderService
+memberService = hello.core.member.MemberServiceImpl@483f286e
+memberService1 = hello.core.member.MemberServiceImpl@483f286e
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

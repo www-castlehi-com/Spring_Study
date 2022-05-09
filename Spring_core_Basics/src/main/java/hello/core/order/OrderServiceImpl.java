@@ -14,14 +14,14 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService{
 
     // 필드 인젝션은 추천되지 않음
-    @Autowired private MemberRepository memberRepository;
+    @Autowired private final MemberRepository memberRepository;
 /*
 OCP, DIP 위반
  */
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
-    @Autowired private DiscountPolicy discountPolicy;
+    @Autowired private final DiscountPolicy discountPolicy;
 
 //    @Autowired(required = false)
 //    public void setMemberRepository(MemberRepository memberRepository) {
@@ -52,9 +52,10 @@ OCP, DIP 위반
         return memberRepository;
     }
 
-    @Autowired
-    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+    //final 안넣으면 가능
+//    @Autowired
+//    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 }

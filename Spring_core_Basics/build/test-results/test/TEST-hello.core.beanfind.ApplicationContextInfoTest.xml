@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.core.beanfind.ApplicationContextInfoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-05-09T06:07:33" hostname="seongha-Macmini.local" time="0.021">
+  <properties/>
+  <testcase name="애플리케이션 빈 출력하기" classname="hello.core.beanfind.ApplicationContextInfoTest" time="0.002"/>
+  <testcase name="모든 빈 출력하기" classname="hello.core.beanfind.ApplicationContextInfoTest" time="0.001"/>
+  <system-out><![CDATA[call AppConfig.memberService
+call AppConfig.memberRepository
+call AppConfig.orderService
+beanDefinitio = Generic bean: class [hello.core.AppConfig$$EnhancerBySpringCGLIB$$3aca37d5]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null object = hello.core.AppConfig$$EnhancerBySpringCGLIB$$3aca37d5@7e34b127
+beanDefinitio = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=memberService; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig object = hello.core.member.MemberServiceImpl@679dd234
+beanDefinitio = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=memberRepository; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig object = hello.core.member.MemoryMemberRepository@60cb1ed6
+beanDefinitio = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=orderService; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig object = hello.core.order.OrderServiceImpl@1e5eb20a
+beanDefinitio = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=discountPolicy; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig object = hello.core.discount.RateDiscountPolicy@4538856f
+call AppConfig.memberService
+call AppConfig.memberRepository
+call AppConfig.orderService
+bean = org.springframework.context.annotation.internalConfigurationAnnotationProcessor object = org.springframework.context.annotation.ConfigurationClassPostProcessor@1775c4e7
+bean = org.springframework.context.annotation.internalAutowiredAnnotationProcessor object = org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor@47829d6d
+bean = org.springframework.context.annotation.internalCommonAnnotationProcessor object = org.springframework.context.annotation.CommonAnnotationBeanPostProcessor@2f677247
+bean = org.springframework.context.event.internalEventListenerProcessor object = org.springframework.context.event.EventListenerMethodProcessor@43f03c23
+bean = org.springframework.context.event.internalEventListenerFactory object = org.springframework.context.event.DefaultEventListenerFactory@7a1b8a46
+bean = appConfig object = hello.core.AppConfig$$EnhancerBySpringCGLIB$$3aca37d5@2921199d
+bean = memberService object = hello.core.member.MemberServiceImpl@3d40a3b4
+bean = memberRepository object = hello.core.member.MemoryMemberRepository@7f13811b
+bean = orderService object = hello.core.order.OrderServiceImpl@59fc6d05
+bean = discountPolicy object = hello.core.discount.RateDiscountPolicy@78307a56
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
