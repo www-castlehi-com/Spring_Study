@@ -7,21 +7,23 @@ import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     // 필드 인젝션은 추천되지 않음
-    @Autowired private final MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 /*
 OCP, DIP 위반
  */
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
-    @Autowired private final DiscountPolicy discountPolicy;
+    private final DiscountPolicy discountPolicy;
 
 //    @Autowired(required = false)
 //    public void setMemberRepository(MemberRepository memberRepository) {
@@ -33,11 +35,12 @@ OCP, DIP 위반
 //        this.discountPolicy = discountPolicy;
 //    }
 
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+//    @Autowired
+//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
+
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
