@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Qualifier("mainDiscountPolicy")
-//@Primary
+@Qualifier("mainDiscountPolicy")
+@Primary
 @MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
 
