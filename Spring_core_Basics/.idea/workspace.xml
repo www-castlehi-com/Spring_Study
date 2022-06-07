@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f250042-64e3-475d-8c3b-e0859f610fc1" name="Changes" comment="회원 도메인 개발">
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scope/PrototypeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hello/core/scope/SingletonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hello/core/lifecycle/BeanLifeCycleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hello/core/lifecycle/BeanLifeCycleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hello/core/lifecycle/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hello/core/lifecycle/NetworkClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,24 +143,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BeanLifeCycleTest">
-    <configuration name="All in core.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PrototypeTest.prototypeBeanFind">
     <configuration name="All in core.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in core.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -197,6 +182,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PrototypeTest.prototypeBeanFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.core.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.core.scope" />
+      <option name="MAIN_CLASS_NAME" value="hello.core.scope.PrototypeTest" />
+      <option name="METHOD_NAME" value="prototypeBeanFind" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonTest.singletonBeanFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.core.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hello.core.scope" />
+      <option name="MAIN_CLASS_NAME" value="hello.core.scope.SingletonTest" />
+      <option name="METHOD_NAME" value="singletonBeanFind" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CoreApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="core.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="hello.core.CoreApplication" />
@@ -213,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrototypeTest.prototypeBeanFind" />
+        <item itemvalue="JUnit.SingletonTest.singletonBeanFind" />
         <item itemvalue="JUnit.BeanLifeCycleTest" />
         <item itemvalue="JUnit.All in core.test (2)" />
         <item itemvalue="JUnit.AllBeanTest" />
-        <item itemvalue="JUnit.All in core.test (1)" />
-        <item itemvalue="JUnit.All in core.test" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +277,7 @@
       <workItem from="1652496963288" duration="8000" />
       <workItem from="1653629217873" duration="2160000" />
       <workItem from="1653712580587" duration="78000" />
-      <workItem from="1654584993212" duration="1058000" />
+      <workItem from="1654584993212" duration="2457000" />
     </task>
     <task id="LOCAL-00001" summary="회원 도메인 개발">
       <created>1647574394840</created>
