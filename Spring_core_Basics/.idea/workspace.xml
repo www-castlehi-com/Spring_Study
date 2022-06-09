@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f250042-64e3-475d-8c3b-e0859f610fc1" name="Changes" comment="회원 도메인 개발">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/core/common/MyLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoSerevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/hello/core/scope/SingletonWithPrototypeTest1$ClientBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/hello/core/scope/SingletonWithPrototypeTest1$ClientBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/hello/core/scope/SingletonWithPrototypeTest1$PrototypeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/hello/core/scope/SingletonWithPrototypeTest1$PrototypeBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/hello/core/scope/SingletonWithPrototypeTest1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/hello/core/scope/SingletonWithPrototypeTest1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hello/core/scope/SingletonWithPrototypeTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hello/core/scope/SingletonWithPrototypeTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoSerevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoSerevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoSerevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoSerevice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +294,7 @@
       <workItem from="1654658742052" duration="3000" />
       <workItem from="1654666913733" duration="13000" />
       <workItem from="1654673673500" duration="354000" />
-      <workItem from="1654754615150" duration="2167000" />
+      <workItem from="1654754615150" duration="2908000" />
     </task>
     <task id="LOCAL-00001" summary="회원 도메인 개발">
       <created>1647574394840</created>
