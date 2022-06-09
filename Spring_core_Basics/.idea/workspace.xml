@@ -11,9 +11,10 @@
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring_Introduction/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_Introduction/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/hello/core/common/MyLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hello/core/common/MyLogger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoSerevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hello/core/web/LogDemoSerevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/common/MyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/common/MyLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoSerevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/core/web/LogDemoSerevice.java" afterDir="false" />
     </list>
@@ -294,7 +295,7 @@
       <workItem from="1654658742052" duration="3000" />
       <workItem from="1654666913733" duration="13000" />
       <workItem from="1654673673500" duration="354000" />
-      <workItem from="1654754615150" duration="2908000" />
+      <workItem from="1654754615150" duration="3342000" />
     </task>
     <task id="LOCAL-00001" summary="회원 도메인 개발">
       <created>1647574394840</created>
