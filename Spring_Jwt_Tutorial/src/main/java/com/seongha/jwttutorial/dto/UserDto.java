@@ -1,6 +1,7 @@
 package com.seongha.jwttutorial.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.seongha.jwttutorial.entity.User;
 import lombok.*;
 
 import jakarta.validation.constraints.NotNull;
@@ -27,4 +28,18 @@ public class UserDto {
     @NotNull
     @Size(min = 3, max = 50)
     private String nickname;
+
+    private Set<AuthorityDto> authorityDtoSet;
+
+    public static UserDto from(User user) {
+        if(user == null) return null;
+
+        return UserDto.builder()
+                .username(user.getUsername())
+                .nickname(user.getNickname())
+                .authorityDtoSet(user.getAuthorities().stream()
+                        .map(authority -> AuthorityDto.builder().authorityName(authority.getAuthorityName()).build())
+                        .collect(Collectors.toSet()))
+                .build();
+    }
 }
