@@ -4,3 +4,5 @@
 ## Spring_Core_Basics
 [스프링 핵심원리 - 기본편v20210807.pdf](https://github.com/moong2/Spring_Study/files/8300176/-.v20210807.pdf)<br>
 [1.+객체+지향+설계와+스프링ppt.pdf](https://github.com/moong2/Spring_Study/files/8300162/1.%2B.%2B.%2B.%2B.ppt.pdf)
+## Springboot_JPA
+[실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발v2.1.pdf](https://github.com/moong2/Spring_Study/files/11257914/JPA.1.-.v2.1.pdf)
