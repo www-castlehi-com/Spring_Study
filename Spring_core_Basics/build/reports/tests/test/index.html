@@ -20,13 +20,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">30</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -38,7 +38,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.745s</div>
+<div class="counter">0.484s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,13 +58,25 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/Gradle%2320Test%2320Executor%23201.html">Gradle Test Executor 1</a>.
+<a href="classes/Gradle%2320Test%2320Executor%23201.html#failed to execute tests">failed to execute tests</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -79,119 +91,19 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
-<a href="packages/hello.core.html">hello.core</a>
+<td class="failures">
+<a href="packages/default-package.html">default-package</a>
 </td>
 <td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.369s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.autowired.html">hello.core.autowired</a>
-</td>
 <td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0.030s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.beandefinition.html">hello.core.beandefinition</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.029s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.beanfind.html">hello.core.beanfind</a>
-</td>
-<td>14</td>
-<td>0</td>
-<td>0</td>
-<td>0.066s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.discount.html">hello.core.discount</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.002s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.member.html">hello.core.member</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.008s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.order.html">hello.core.order</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.001s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.scan.html">hello.core.scan</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.066s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.scan.Filter.html">hello.core.scan.Filter</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.027s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.singleton.html">hello.core.singleton</a>
-</td>
-<td>6</td>
-<td>0</td>
-<td>0</td>
-<td>0.062s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/hello.core.xml.html">hello.core.xml</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.085s</td>
-<td class="success">100%</td>
+<td>0.484s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -206,164 +118,14 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
-<a href="classes/hello.core.CoreApplicationTests.html">hello.core.CoreApplicationTests</a>
+<td class="failures">
+<a href="classes/Gradle%2320Test%2320Executor%23201.html">Gradle Test Executor 1</a>
 </td>
 <td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.369s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.autowired.AutowiredTest.html">hello.core.autowired.AutowiredTest</a>
-</td>
 <td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0.030s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.beandefinition.BeanDefinitionTest.html">hello.core.beandefinition.BeanDefinitionTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.029s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.beanfind.ApplicationContextBasicFindTest.html">hello.core.beanfind.ApplicationContextBasicFindTest</a>
-</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0.044s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.beanfind.ApplicationContextExtendsFindTest.html">hello.core.beanfind.ApplicationContextExtendsFindTest</a>
-</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
-<td>0.015s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.beanfind.ApplicationContextInfoTest.html">hello.core.beanfind.ApplicationContextInfoTest</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.003s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.beanfind.ApplicationContextSameBeanFIndTest.html">hello.core.beanfind.ApplicationContextSameBeanFIndTest</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.004s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.discount.RateDiscountPolicyTest.html">hello.core.discount.RateDiscountPolicyTest</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.002s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.member.MemberServiceTest.html">hello.core.member.MemberServiceTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.008s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.order.OrderServiceTest.html">hello.core.order.OrderServiceTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.001s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.scan.AutoAppConfigTest.html">hello.core.scan.AutoAppConfigTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.066s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.scan.Filter.ComponentFilterAppConfigTest.html">hello.core.scan.Filter.ComponentFilterAppConfigTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.027s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.singleton.ConfigurationSingletonTest.html">hello.core.singleton.ConfigurationSingletonTest</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.039s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.singleton.SingletonTest.html">hello.core.singleton.SingletonTest</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.014s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.singleton.StatefulServiceTest.html">hello.core.singleton.StatefulServiceTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.009s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/hello.core.xml.XmlAppContext.html">hello.core.xml.XmlAppContext</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.085s</td>
-<td class="success">100%</td>
+<td>0.484s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
@@ -376,7 +138,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4.1</a> at 2022. 5. 9. 오후 3:07:34</p>
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 2023. 8. 23. 오후 7:24:05</p>
 </div>
 </div>
 </body>
