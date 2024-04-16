@@ -44,5 +44,8 @@ public class IndexController {
         return context.getAuthentication().getName();
     }
 
-
+    @GetMapping("/logoutSuccess")
+    public String logoutSuccess() {
+        return "logoutSuccess";
+    }
 }
