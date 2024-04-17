@@ -12,19 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
-    @Autowired
-    SecurityContextService securityContextService;
-
     @GetMapping("/")
-    public String index() {
-//        SecurityContext securityContext = SecurityContextHolder.getContext();
-        SecurityContext securityContext = SecurityContextHolder.getContextHolderStrategy().getContext();
-        Authentication authentication = securityContext.getAuthentication();
-        System.out.println("authentication = " + authentication);
-
-        securityContextService.securityContext();
-
-        return "index";
+    public String index(String customParam){
+        if(customParam == null){
+            return "index";
+        }else{
+            return "customPage";
+        }
     }
 
     @GetMapping("/home")
