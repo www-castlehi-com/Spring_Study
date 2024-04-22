@@ -22,18 +22,18 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/invalidSessionUrl", "/expiredUrl").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(Customizer.withDefaults())
-                .csrf(AbstractHttpConfigurer::disable);
+                .sessionManagement(session -> session
+//                        .invalidSessionUrl("/invalidSessionUrl")
+                        .maximumSessions(1)
+                        .maxSessionsPreventsLogin(false)
+                        .expiredUrl("/expiredUrl")
+                )
+        ;
 
         return http.build();
-    }
-
-    // AuthenticationManager 빈 등록
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
     }
 
     @Bean
