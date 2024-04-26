@@ -29,6 +29,7 @@ public class SecurityConfig {
                         .requestMatchers("user").hasRole("USER")
                         .requestMatchers("db").hasRole("DB")
                         .requestMatchers("admin").hasRole("ADMIN")
+                        .requestMatchers("/secure").access(new CustomAuthorizationManager())
                         .anyRequest().authenticated())
                 .formLogin(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
