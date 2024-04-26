@@ -19,10 +19,21 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 @EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true)
 public class SecurityConfig {
 
+//    @Bean
+//    public WebSecurityCustomizer webSecurityCustomizer() {
+//        return new WebSecurityCustomizer() {
+//            @Override
+//            public void customize(WebSecurity web) {
+//               web.ignoring().requestMatchers(PathRequest.toStaticResources().atCommonLocations());
+//            }
+//        };
+//    }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, HandlerMappingIntrospector introspector) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/images/**").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
