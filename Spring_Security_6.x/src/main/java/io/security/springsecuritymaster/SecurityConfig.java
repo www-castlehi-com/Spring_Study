@@ -1,9 +1,10 @@
 package io.security.springsecuritymaster;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
@@ -15,8 +16,11 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
+@RequiredArgsConstructor
 @Configuration
 public class SecurityConfig {
+
+    private final ApplicationEventPublisher eventPublisher;
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
@@ -30,12 +34,30 @@ public class SecurityConfig {
 
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .anyRequest().authenticated())
-                .formLogin(Customizer.withDefaults())
-                .csrf(AbstractHttpConfigurer::disable);
+                        .anyRequest().permitAll())
+                .formLogin(form -> form
+                        .successHandler((request, response, authentication) -> {
+                            eventPublisher.publishEvent(new CustomAuthenticationSuccessEvent(authentication));
+                            response.sendRedirect("/");
+                        }))
+                .csrf(AbstractHttpConfigurer::disable)
+//                .authenticationProvider(authenticationProvider)
+//                .authenticationProvider(customAuthenticationProvider2())
+                ;
 
         return http.build();
     }
+
+//    @Bean
+//    public AuthenticationProvider customAuthenticationProvider2(){
+//        return new CustomAuthenticationProvider2(authenticationEventPublisher(null));
+//    }
+//    @Bean
+//    public DefaultAuthenticationEventPublisher authenticationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+//        DefaultAuthenticationEventPublisher authenticationEventPublisher = new DefaultAuthenticationEventPublisher(applicationEventPublisher);
+//        return authenticationEventPublisher;
+//    }
+
     @Bean
     public UserDetailsService userDetailsService(){
         UserDetails user = User.withUsername("user").password("{noop}1111").roles("USER").build();
