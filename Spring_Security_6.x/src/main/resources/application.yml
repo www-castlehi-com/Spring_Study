@@ -1,3 +1,6 @@
 spring:
-  application:
-    name: spring-security-master
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8081
