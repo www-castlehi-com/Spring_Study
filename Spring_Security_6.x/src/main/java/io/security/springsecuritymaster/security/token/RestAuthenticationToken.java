@@ -17,20 +17,20 @@ public class RestAuthenticationToken extends AbstractAuthenticationToken {
         setAuthenticated(false);
     }
 
-    public RestAuthenticationToken(Collection<? extends GrantedAuthority> authorities, Object principal, Object credentials) {
+    public RestAuthenticationToken(Object principal, Object credentials, Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
         this.principal = principal;
         this.credentials = credentials;
-        setAuthenticated(true);
+        super.setAuthenticated(true);
     }
 
     @Override
     public Object getCredentials() {
-        return this.getCredentials();
+        return this.credentials;
     }
 
     @Override
     public Object getPrincipal() {
-        return this.getPrincipal();
+        return this.principal;
     }
 }

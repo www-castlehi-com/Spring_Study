@@ -1,4 +1,4 @@
-package io.security.springsecuritymaster.security.config;
+package io.security.springsecuritymaster.security.configs;
 
 import io.security.springsecuritymaster.security.filters.RestAuthenticationFilter;
 import io.security.springsecuritymaster.security.handler.FormAccessDeniedHandler;
@@ -29,14 +29,13 @@ public class SecurityConfig {
     private final AuthenticationDetailsSource<HttpServletRequest, WebAuthenticationDetails> authenticationDetailsSource;
     private final AuthenticationSuccessHandler successHandler;
     private final AuthenticationFailureHandler failureHandler;
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/css/**", "/images/**", "/js/**", "/favicon.*", "/*/icon-*").permitAll()
-                        .requestMatchers("/","/signup", "/login*").permitAll()
+                        .requestMatchers("/","/signup","/login*").permitAll()
                         .requestMatchers("/user").hasAuthority("ROLE_USER")
                         .requestMatchers("/manager").hasAuthority("ROLE_MANAGER")
                         .requestMatchers("/admin").hasAuthority("ROLE_ADMIN")
@@ -48,25 +47,28 @@ public class SecurityConfig {
                         .successHandler(successHandler)
                         .failureHandler(failureHandler)
                         .permitAll())
+//                .csrf(AbstractHttpConfigurer::disable)
                 .authenticationProvider(authenticationProvider)
-                .exceptionHandling(exception -> exception.accessDeniedHandler(new FormAccessDeniedHandler("/denied")))
+                .exceptionHandling(exception -> exception
+                        .accessDeniedHandler(new FormAccessDeniedHandler("/denied"))
+                )
         ;
         return http.build();
     }
+
 
     @Bean
     @Order(1)
     public SecurityFilterChain restSecurityFilterChain(HttpSecurity http) throws Exception {
 
         AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
-        AuthenticationManager authenticationManager = authenticationManagerBuilder.build();
+        AuthenticationManager authenticationManager = authenticationManagerBuilder.build();            // build() 는 최초 한번 만 호출해야 한다
 
         http
-                .securityMatcher("/api/login")
+                .securityMatcher("/api/**")
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/css/**", "/images/**", "/js/**", "/favicon.*", "/*/icon-*").permitAll()
-                        .anyRequest().permitAll()
-                )
+                        .anyRequest().permitAll())
                 .csrf(AbstractHttpConfigurer::disable)
                 .addFilterBefore(restAuthenticationFilter(authenticationManager), UsernamePasswordAuthenticationFilter.class)
                 .authenticationManager(authenticationManager)
@@ -75,6 +77,7 @@ public class SecurityConfig {
     }
 
     private RestAuthenticationFilter restAuthenticationFilter(AuthenticationManager authenticationManager) {
+
         RestAuthenticationFilter restAuthenticationFilter = new RestAuthenticationFilter();
         restAuthenticationFilter.setAuthenticationManager(authenticationManager);
 
