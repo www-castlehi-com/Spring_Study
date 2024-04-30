@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.security.springsecuritymaster.domain.dto.AccountDto;
 import io.security.springsecuritymaster.security.token.RestAuthenticationToken;
 import io.security.springsecuritymaster.util.WebUtil;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpMethod;
@@ -18,28 +17,27 @@ import org.springframework.util.StringUtils;
 import java.io.IOException;
 
 public class RestAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
-
     private final ObjectMapper objectMapper = new ObjectMapper();
-
     public RestAuthenticationFilter() {
         super(new AntPathRequestMatcher("/api/login", "POST"));
     }
 
     @Override
-    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
+            throws AuthenticationException, IOException {
 
-        if (HttpMethod.POST.name().equals(request.getMethod()) || !WebUtil.isAjax(request)) {
+        if (!HttpMethod.POST.name().equals(request.getMethod()) || !WebUtil.isAjax(request)) {
             throw new IllegalArgumentException("Authentication method not supported");
         }
 
         AccountDto accountDto = objectMapper.readValue(request.getReader(), AccountDto.class);
 
-        if (!StringUtils.hasText(accountDto.getUsername()) || StringUtils.hasText(accountDto.getPassword())) {
+        if (!StringUtils.hasText(accountDto.getUsername()) || !StringUtils.hasText(accountDto.getPassword())) {
             throw new AuthenticationServiceException("Username or Password not provided");
         }
+        RestAuthenticationToken token = new RestAuthenticationToken(accountDto.getUsername(),accountDto.getPassword());
 
-        RestAuthenticationToken authenticationToken = new RestAuthenticationToken(accountDto.getUsername(), accountDto.getPassword());
-
-        return getAuthenticationManager().authenticate(authenticationToken);
+        return this.getAuthenticationManager().authenticate(token);
     }
+
 }
