@@ -1,6 +1,7 @@
 package io.security.springsecuritymaster.security.manager;
 
-import io.security.springsecuritymaster.security.mapper.MapBasedUrlRoleMapper;
+import io.security.springsecuritymaster.admin.repositiory.ResourcesRepository;
+import io.security.springsecuritymaster.security.mapper.PersistentUrlRoleMapper;
 import io.security.springsecuritymaster.security.service.DynamicAuthorizationService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -23,14 +24,18 @@ import java.util.stream.Collectors;
 @Component
 @RequiredArgsConstructor
 public class CustomDynamicAuthorizationManager implements AuthorizationManager<RequestAuthorizationContext> {
-
-    private List<RequestMatcherEntry<AuthorizationManager<RequestAuthorizationContext>>> mappings;
-    private static final AuthorizationDecision DENY = new AuthorizationDecision(false);
+    List<RequestMatcherEntry<AuthorizationManager<RequestAuthorizationContext>>> mappings;
+    //    private static final AuthorizationDecision DENY = new AuthorizationDecision(false);
+    private static final AuthorizationDecision ACCESS = new AuthorizationDecision(true);
     private final HandlerMappingIntrospector handlerMappingIntrospector;
+    private final ResourcesRepository resourcesRepository;
 
     @PostConstruct
     public void mapping() {
-        DynamicAuthorizationService dynamicAuthorizationService = new DynamicAuthorizationService(new MapBasedUrlRoleMapper());
+
+        DynamicAuthorizationService dynamicAuthorizationService =
+                new DynamicAuthorizationService(new PersistentUrlRoleMapper(resourcesRepository));
+
         mappings = dynamicAuthorizationService.getUrlRoleMappings()
                 .entrySet().stream()
                 .map(entry -> new RequestMatcherEntry<>(
@@ -38,36 +43,33 @@ public class CustomDynamicAuthorizationManager implements AuthorizationManager<R
                         customAuthorizationManager(entry.getValue())))
                 .collect(Collectors.toList());
     }
-
-    private AuthorizationManager<RequestAuthorizationContext> customAuthorizationManager(String role) {
-        if (role != null) {
-            if (role.startsWith("ROLE")) {
-                return AuthorityAuthorizationManager.hasAuthority(role);
-            }
-            else {
-                return new WebExpressionAuthorizationManager(role);
-            }
-        }
-        return null;
-    }
-
     @Override
     public AuthorizationDecision check(Supplier<Authentication> authentication, RequestAuthorizationContext request) {
+
         for (RequestMatcherEntry<AuthorizationManager<RequestAuthorizationContext>> mapping : this.mappings) {
+
             RequestMatcher matcher = mapping.getRequestMatcher();
             RequestMatcher.MatchResult matchResult = matcher.matcher(request.getRequest());
+
             if (matchResult.isMatch()) {
                 AuthorizationManager<RequestAuthorizationContext> manager = mapping.getEntry();
                 return manager.check(authentication,
                         new RequestAuthorizationContext(request.getRequest(), matchResult.getVariables()));
             }
         }
-
-        return DENY;
+        return ACCESS;
     }
 
     @Override
     public void verify(Supplier<Authentication> authentication, RequestAuthorizationContext object) {
         AuthorizationManager.super.verify(authentication, object);
+    }
+
+    private AuthorizationManager<RequestAuthorizationContext> customAuthorizationManager(String role) {
+        if (role.startsWith("ROLE")) {
+            return AuthorityAuthorizationManager.hasAuthority(role);
+        }else{
+            return new WebExpressionAuthorizationManager(role);
+        }
     }
 }

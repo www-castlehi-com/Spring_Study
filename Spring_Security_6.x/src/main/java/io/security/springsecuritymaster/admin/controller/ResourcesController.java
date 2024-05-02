@@ -44,6 +44,8 @@ public class ResourcesController {
         Resources resources = modelMapper.map(resourcesDto, Resources.class);
         resources.setRoleSet(roles);
 
+        resourcesService.createResources(resources);
+
         return "redirect:/admin/resources";
     }
 
@@ -71,7 +73,7 @@ public class ResourcesController {
         model.addAttribute("myRoles", myRoles);
         ModelMapper modelMapper = new ModelMapper();
         ResourcesDto resourcesDto = modelMapper.map(resources, ResourcesDto.class);
-        model.addAttribute("resouces", resourcesDto);
+        model.addAttribute("resources", resourcesDto);
 
         return "admin/resourcesdetails";
     }
