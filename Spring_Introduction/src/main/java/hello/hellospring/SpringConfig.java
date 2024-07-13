@@ -37,4 +37,9 @@ public class SpringConfig {
 		// return new MemberService(memberRepository());
 		return new MemberService(memberRepository);
 	}
+
+	// @Bean
+	// public TimeTraceAop timeTraceAop() {
+	// 	return new TimeTraceAop();
+	// }
 }
