@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import hello.hellospring.repository.JdbcTemplateMemberRepository;
+import hello.hellospring.repository.JpaMemberRepostiory;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.service.MemberService;
+import jakarta.persistence.EntityManager;
 
 @Configuration
 public class SpringConfig {
@@ -16,11 +17,15 @@ public class SpringConfig {
 	@Autowired
 	private DataSource dataSource;
 
+	@Autowired
+	private EntityManager em;
+
 	@Bean
 	public MemberRepository memberRepository() {
 		// return new MemoryMemberRepository();
 		// return new JdbcMemberRepository(dataSource);
-		return new JdbcTemplateMemberRepository(dataSource);
+		// return new JdbcTemplateMemberRepository(dataSource);
+		return new JpaMemberRepostiory(em);
 	}
 
 	@Bean
