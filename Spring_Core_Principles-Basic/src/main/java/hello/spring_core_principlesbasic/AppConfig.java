@@ -16,23 +16,26 @@ import hello.spring_core_principlesbasic.order.OrderServiceImpl;
 public class AppConfig {
 
 	@Bean
-	public static MemberRepository memberRepository() {
+	public MemberRepository memberRepository() {
+		System.out.println("call AppConfig.memberRepository");
 		return new MemoryMemberRepository();
 	}
 
 	@Bean
-	public static DiscountPolicy discountPolicy() {
+	public DiscountPolicy discountPolicy() {
 		// return new FixDiscountPolicy();
 		return new RateDiscountPolicy();
 	}
 
 	@Bean
 	public MemberService memberService() {
+		System.out.println("call AppConfig.memberService");
 		return new MemberServiceImpl(memberRepository());
 	}
 
 	@Bean
 	public OrderService orderService() {
+		System.out.println("call AppConfig.orderService");
 		return new OrderServiceImpl(memberRepository(), discountPolicy());
 	}
 }
