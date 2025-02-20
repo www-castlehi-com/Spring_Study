@@ -99,21 +99,39 @@ public class BasicController {
 		return "basic/attribute";
 	}
 
+	@GetMapping("/each")
+	public String each(Model model) {
+		addUsers(model);
+
+		return "basic/each";
+	}
+
 	@Data
 	static class User {
+
 		private String username;
 		private int age;
-
 		public User(String username, int age) {
 			this.username = username;
 			this.age = age;
 		}
-	}
 
+	}
 	@Component("helloBean")
 	static class HelloBean {
+
 		public String hello(String data) {
 			return "Hello " + data;
 		}
+	}
+
+	private void addUsers(Model model) {
+		List<User> users = new ArrayList<>();
+
+		users.add(new User("uesrA", 10));
+		users.add(new User("uesrB", 20));
+		users.add(new User("uesrC", 30));
+
+		model.addAttribute("users", users);
 	}
 }
