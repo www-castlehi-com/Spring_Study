@@ -154,6 +154,12 @@ public class ValidationItemControllerV2 {
 		log.info("objectName = {}", bindingResult.getObjectName());
 		log.info("target = {}", bindingResult.getTarget());
 
+		// 검증에 실패하면 다시 입력 폼으로
+		if (bindingResult.hasErrors()) {
+			log.info("errors = {} ", bindingResult);
+			return "validation/v2/addForm";
+		}
+
 		// 검증 로직
 		ValidationUtils.rejectIfEmptyOrWhitespace(bindingResult, "itemName", "required");
 		// if (!StringUtils.hasText(item.getItemName())) {
@@ -170,15 +176,10 @@ public class ValidationItemControllerV2 {
 		if (item.getPrice() != null && item.getQuantity() != null) {
 			int resultPrice = item.getPrice() * item.getQuantity();
 			if (resultPrice < 10_000) {
- 				bindingResult.reject("totalPrice", new Object[]{10000, resultPrice}, null);
+				bindingResult.reject("totalPrice", new Object[]{10000, resultPrice}, null);
 			}
 		}
 
-		// 검증에 실패하면 다시 입력 폼으로
-		if (bindingResult.hasErrors()) {
-			log.info("errors = {} ", bindingResult);
-			return "validation/v2/addForm";
-		}
 
 		// 성공 로직
 		Item savedItem = itemRepository.save(item);
