@@ -13,3 +13,9 @@
 ### [Spring_Core_Principles-Basic](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_Core_Principles-Basic)
 - 인프런 : https://www.inflearn.com/course/스프링-핵심-원리-기본편
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring%20Core%20Principles%20-%20Basics
+### [Spring_MVC_1](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_MVC_1)
+- 인프런 : https://www.inflearn.com/course/스프링-mvc-1
+- 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-MVC-Part-1
+### [SPRING_MVC_2](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_MVC_2)
+- 인프런 : https://www.inflearn.com/course/스프링-mvc-2
+- 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-MVC-Part-2
