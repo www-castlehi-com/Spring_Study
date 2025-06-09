@@ -20,5 +20,5 @@
 - 인프런 : https://www.inflearn.com/course/스프링-mvc-2
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-MVC-Part-2
 ### [Spring_DB_1](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_DB_1)
-- 인프런 : https://www.inflearn.com/course/스프링-db-1/
+- 인프런 : https://www.inflearn.com/course/스프링-db-1
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-DB-Part-1
