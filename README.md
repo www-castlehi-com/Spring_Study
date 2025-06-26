@@ -22,3 +22,6 @@
 ### [Spring_DB_1](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_DB_1)
 - 인프런 : https://www.inflearn.com/course/스프링-db-1
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-DB-Part-1
+### [Spring_DB_2](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_DB_2)
+- 인프런 : https://www.inflearn.com/course/스프링-db-2
+- 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-DB-Part-2
