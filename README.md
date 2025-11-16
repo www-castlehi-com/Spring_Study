@@ -25,3 +25,6 @@
 ### [Spring_DB_2](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_DB_2)
 - 인프런 : https://www.inflearn.com/course/스프링-db-2
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-DB-Part-2
+### [Spring_Core_Principles-Advanced](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_Advanced)
+- 인프런 : https://www.inflearn.com/course/스프링-핵심-원리-고급편
+- 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-Advanced
