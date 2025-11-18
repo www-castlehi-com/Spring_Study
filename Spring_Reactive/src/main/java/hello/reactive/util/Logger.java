@@ -12,20 +12,48 @@ public class Logger {
 		log.info(msg, data);
 	}
 
+	public static void info(String msg, Object data1, Object data2) {
+		log.info(msg, data1, data2);
+	}
+
 	public static void doOnNext(Object data) {
 		log.info("# doOnNext(): {}", data);
 	}
 
-	public static void doOnNext(String operator, Object data) {
-		log.info("# doOnNext() {}: {}", operator, data);
+	public static void doOnNext(Object data1, Object data2) {
+		log.info("# doOnNext() {}: {}", data1, data2);
 	}
 
 	public static void doOnNext(String taskName, String operator, Object data) {
 		log.info("# doOnNext() {} {}: {}", taskName, operator, data);
 	}
 
+	public static void doOnSubscribe() {
+		log.info("# doOnSubscribe()");
+	}
+
+	public static void doFirst() {
+		log.info("# doFirst()");
+	}
+
+	public static void doFinally(Object data) {
+		log.info("# doFinally(): {}", data);
+	}
+
 	public static void doOnRequest(Object data) {
 		log.info("# doOnRequest(): {}", data);
+	}
+
+	public static void doOnComplete() {
+		log.info("# doOnComplete()");
+	}
+
+	public static void doOnTerminate(String operator) {
+		log.info("# doOnTerminate() {}", operator);
+	}
+
+	public static void doAfterTerminate(String operator) {
+		log.info("# doAfterTerminate() {}", operator);
 	}
 
 	public static void onNext(Object data) {
@@ -36,12 +64,20 @@ public class Logger {
 		log.info("# onNext(): {} : {}", data1, data2);
 	}
 
+	public static void onNext(String message, Object data1, Object data2) {
+		log.info("# onNext(): " + message, data1, data2);
+	}
+
 	public static void onError(Throwable error) {
 		log.error("error happened: ", error);
 	}
 
+	public static void onError(String message, Throwable error, Object data) {
+		log.error(message, error, data);
+	}
+
 	public static void onComplete() {
-		log.error("# onComplete()");
+		log.info("# onComplete()");
 	}
 
 	public static void onComplete(Object data) {
