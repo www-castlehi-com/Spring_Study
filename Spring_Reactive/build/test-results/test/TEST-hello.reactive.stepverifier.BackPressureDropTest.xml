@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.reactive.stepverifier.BackPressureDropTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-17T16:09:29.189Z" hostname="seonghas-MacBook-Pro.local" time="0.188">
+  <properties/>
+  <testcase name="generateNumberTest()" classname="hello.reactive.stepverifier.BackPressureDropTest" time="0.188"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
