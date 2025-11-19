@@ -6,7 +6,7 @@ import reactor.core.publisher.Flux;
 
 import java.time.Duration;
 
-public class Retry {
+public class Retry01 {
 	public static void main(String[] args) throws InterruptedException {
 		final int[] count = {1};
 		Flux
