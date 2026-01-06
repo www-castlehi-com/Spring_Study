@@ -28,3 +28,7 @@
 ### [Spring_Core_Principles-Advanced](https://github.com/www-castlehi-com/Spring_Study/tree/master/Spring_Advanced)
 - 인프런 : https://www.inflearn.com/course/스프링-핵심-원리-고급편
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/Spring-Advanced
+## 김영한의 스프링 부트와 JPA 실무 완전 정복 로드맵
+### [JPA Basic](https://github.com/www-castlehi-com/Spring_Study/tree/master/JPA_Basic)
+- 인프런 : https://www.inflearn.com/course/ORM-JPA-Basic
+- 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/JPA-Basic
