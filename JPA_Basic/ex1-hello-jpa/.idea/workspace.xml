@@ -4,30 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19e48b2a-228e-4d76-bc1e-9d353ee05d77" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/.gradle/8.14.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/.gradle/8.14.3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/Immediate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/Immediate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/PublishOn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/PublishOn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/PublishOnAndSubscribeOn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/PublishOnAndSubscribeOn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/SubscribeOn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/SubscribeOn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/SubscribeOnAndPublishOn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/schedulers/SubscribeOnAndPublishOn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/util/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring_Reactive/build/classes/java/main/hello/reactive/util/Logger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/InitDataConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/InfoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/TreeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/ServiceGroup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ApplicationDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceGroupDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ApplicationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceGroupRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/InfoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/TreeService.java" beforeDir="false" />
+    <list default="true" id="19e48b2a-228e-4d76-bc1e-9d353ee05d77" name="Changes" comment="섹션 3 : JPA 시작하기&#10;- Hello JPA 프로젝트 생성">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/Immediate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/PublishOn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/PublishOnAndSubscribeOn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/SubscribeOn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/SubscribeOnAndPublishOn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26,_21_05_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_26__21_05__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +40,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -60,6 +65,7 @@
   "keyToString": {
     "Application.JpaMain.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/seongha/Study/Programming/Spring_Study/JPA_Basic/ex1-hello-jpa",
@@ -111,11 +117,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1767700439354</updated>
-      <workItem from="1767700440379" duration="655000" />
+      <workItem from="1767700440379" duration="922000" />
     </task>
+    <task id="LOCAL-00001" summary="gitignore">
+      <option name="closed" value="true" />
+      <created>1767701127307</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1767701127307</updated>
+    </task>
+    <task id="LOCAL-00002" summary="섹션 3 : JPA 시작하기&#10;- Hello JPA 프로젝트 생성">
+      <option name="closed" value="true" />
+      <created>1767701192607</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767701192607</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="섹션 3 : JPA 시작하기&#10;- Hello JPA 프로젝트 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="섹션 3 : JPA 시작하기&#10;- Hello JPA 프로젝트 생성" />
   </component>
 </project>
