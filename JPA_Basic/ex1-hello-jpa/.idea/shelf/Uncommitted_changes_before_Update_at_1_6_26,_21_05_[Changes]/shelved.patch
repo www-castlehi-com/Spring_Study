@@ -1,0 +1,157 @@
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/service/InfoService.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/InfoService.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/InfoService.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/InfoService.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.service;public class InfoService {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/service/TreeService.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/TreeService.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/TreeService.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/service/TreeService.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.service;public class TreeService {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/TreeController.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/TreeController.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/TreeController.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/TreeController.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.controller;public class TreeController {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/InfoController.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/InfoController.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/InfoController.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/controller/InfoController.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.controller;public class InfoController {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceRepository.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceRepository.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceRepository.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceRepository.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.repository;public interface ServiceRepository {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/ServiceGroup.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/ServiceGroup.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/ServiceGroup.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/ServiceGroup.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.domain;public class ServiceGroup {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ApplicationRepository.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ApplicationRepository.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ApplicationRepository.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ApplicationRepository.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.repository;public interface ApplicationRepository {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/InitDataConfig.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/InitDataConfig.java b/../../jpa-test/src/main/java/hello/jpatest/InitDataConfig.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/InitDataConfig.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest;public class InitDataConfig {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Application.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Application.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Application.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Application.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.domain;public class Applicatoin {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceGroupRepository.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceGroupRepository.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceGroupRepository.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/repository/ServiceGroupRepository.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.repository;public class ServiceGroupRepository {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceDto.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceDto.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceDto.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceDto.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.model;public class ServiceDto {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Service.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Service.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Service.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/domain/Service.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.domain;public class Service {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceGroupDto.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceGroupDto.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceGroupDto.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ServiceGroupDto.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.model;public class ServiceGroupDto {
+-}
+Index: ../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ApplicationDto.java
+===================================================================
+diff --git a/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ApplicationDto.java b/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ApplicationDto.java
+deleted file mode 100644
+--- a/../../jpa-test/src/main/java/hello/jpatest/nplus1/model/ApplicationDto.java	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ /dev/null	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
+@@ -1,2 +0,0 @@
+-package hello.jpatest.nplus1.model;public class ApplicationDto {
+-}
+Index: ../../Spring_Reactive/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n          </set>\n        </option>\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Spring_Reactive/.idea/gradle.xml b/../../Spring_Reactive/.idea/gradle.xml
+--- a/../../Spring_Reactive/.idea/gradle.xml	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ b/../../Spring_Reactive/.idea/gradle.xml	(date 1763558951429)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: ../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Tue Nov 18 20:32:53 KST 2025\ngradle.version=8.14.3\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties b/../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties
+--- a/../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties	(revision 421098229cdc9c9899496c6cb57e5d28fd669890)
++++ b/../../Spring_Reactive/.gradle/buildOutputCleanup/cache.properties	(date 1763473734096)
+@@ -1,2 +1,2 @@
+-#Tue Nov 18 20:32:53 KST 2025
++#Tue Nov 18 22:48:54 KST 2025
+ gradle.version=8.14.3
