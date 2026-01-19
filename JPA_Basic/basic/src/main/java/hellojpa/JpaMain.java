@@ -16,33 +16,20 @@ public class JpaMain {
         tx.begin();
 
         try {
-            // 등록
-            // Member member = new Member();
-            // member.setId(2L);
-            // member.setName("HelloB");
-            // em.persist(member);
+            // 저장
+            Team team = new Team();
+            team.setName("TeamA");
+            em.persist(team);
+
+            Member member = new Member();
+            member.setUsername("member1");
+            member.setTeam(team);
+            em.persist(member);
 
             // 조회
-            // Member findMember = em.find(Member.class, 1L);
-            // System.out.println("findMember.getId() = " + findMember.getId());
-            // System.out.println("findMember.getName() = " + findMember.getName());
-
-            // 수정
-            // Member findMember = em.find(Member.class, 1L);
-            // findMember.setName("HelloJPA");
-
-            // 삭제
-            // Member findMember = em.find(Member.class, 2L);
-            // em.remove(findMember);
-
-            // JPQL
-            // List<Member> result = em.createQuery("select m from Member as m", Member.class)
-            //         .setFirstResult(1)
-            //         .setMaxResults(10)
-            //         .getResultList();
-            // for (Member member : result) {
-            //     System.out.println("member.getName() = " + member.getName());
-            // }
+            Member findMember = em.find(Member.class, member.getId());
+            Team findTeam = findMember.getTeam();
+            System.out.println("findTeam = " + findTeam.getName());
 
             tx.commit();
         } catch (Exception e) {
