@@ -2,8 +2,7 @@ package jpabook.jpashop;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jpabook.jpashop.domain.Order;
-import jpabook.jpashop.domain.OrderItem;
+import jpabook.jpashop.domain.Book;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,9 +14,10 @@ public class TestService {
 
 	@Transactional
 	public void test() {
-		Order order = new Order();
-		order.addOrderItem(new OrderItem());
+		Book book = new Book();
+		book.setName("JPA");
+		book.setAuthor("김영한");
 
-		em.persist(order); // 필요하면
+		em.persist(book);
 	}
 }
