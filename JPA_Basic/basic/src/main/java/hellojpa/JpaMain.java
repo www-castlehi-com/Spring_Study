@@ -1,54 +1,58 @@
 package hellojpa;
 
-import jakarta.persistence.*;
-import org.hibernate.Hibernate;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+
+import java.util.List;
 
 public class JpaMain {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
-        EntityManager em = emf.createEntityManager();
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+		EntityManager em = emf.createEntityManager();
 
-        //code
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
+		//code
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
 
-        try {
-            Member member = new Member();
-            member.setUsername("hello");
-            em.persist(member);
+		try {
+			Team team = new Team();
+			team.setName("teamA");
+			em.persist(team);
 
-            em.flush();
-            em.clear();
+			Member member = new Member();
+			member.setUsername("hello");
+			member.setTeam(team);
+			em.persist(member);
 
-            Member reference = em.getReference(Member.class, member.getId());
-            System.out.println("reference.getClass() = " + reference.getClass());
+			em.flush();
+			em.clear();
 
-            System.out.println("emf.getPersistenceUnitUtil().isLoaded(reference) = " + emf.getPersistenceUnitUtil().isLoaded(reference));
-            Hibernate.initialize(reference);
-            System.out.println("emf.getPersistenceUnitUtil().isLoaded(reference) = " + emf.getPersistenceUnitUtil().isLoaded(reference));
+            List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 
-            tx.commit();
-        } catch (Exception e) {
-            tx.rollback();
-            e.printStackTrace();
-        } finally {
-            em.close();
-        }
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+		} finally {
+			em.close();
+		}
 
-        emf.close();
-    }
+		emf.close();
+	}
 
-    private static void printMember(Member member) {
-        System.out.println("member = " + member.getUsername());
-    }
+	private static void printMember(Member member) {
+		System.out.println("member = " + member.getUsername());
+	}
 
-    private static void printMemberAndTeam(Member member) {
-        String username = member.getUsername();
-        System.out.println("username = " + username);
+	private static void printMemberAndTeam(Member member) {
+		String username = member.getUsername();
+		System.out.println("username = " + username);
 
-        Team team = member.getTeam();
-        System.out.println("team = " + team.getName());
-    }
+		Team team = member.getTeam();
+		System.out.println("team = " + team.getName());
+	}
 }
