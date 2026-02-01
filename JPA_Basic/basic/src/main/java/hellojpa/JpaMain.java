@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class JpaMain {
@@ -19,21 +20,25 @@ public class JpaMain {
 		tx.begin();
 
 		try {
-			Address address = new Address("city", "street", "10000");
-
 			Member member = new Member();
 			member.setUsername("member1");
-			member.setHomeAddress(address);
+
+			member.getFavoriteFoods().addAll(Arrays.asList("치킨", "족발", "피자"));
+			member.getAddressHistory().addAll(Arrays.asList(new AddressEntity("old1", "street", "10000"), new AddressEntity("old2", "street", "10000")));
+
 			em.persist(member);
 
-			Address copyAddress = new Address(address.getCity(), address.getStreet(), address.getZipcode());
+			em.flush();
+			em.clear();
 
-			Member member2 = new Member();
-			member2.setUsername("member2");
-			member2.setHomeAddress(copyAddress);
-			em.persist(member2);
+			System.out.println("=============== START ===============");
+			Member findMember = em.find(Member.class, member.getId());
 
-			member.getHomeAddress().setCity("newCity");
+			findMember.getFavoriteFoods().remove("치킨");
+			findMember.getFavoriteFoods().add("한식");
+
+			findMember.getAddressHistory().remove(new AddressEntity("old1", "street", "10000"));
+			findMember.getAddressHistory().add(new AddressEntity("newCity1", "street", "10000"));
 
 			tx.commit();
 		} catch (Exception e) {
