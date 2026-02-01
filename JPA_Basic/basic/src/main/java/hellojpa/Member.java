@@ -27,6 +27,20 @@ public class Member extends BaseEntity {
 	@OneToMany(mappedBy = "member")
 	private List<MemberProduct> memberProducts = new ArrayList<>();
 
+	@Embedded
+	private Period workPeriod;
+
+	@Embedded
+	private Address homeAddress;
+
+	@Embedded
+	@AttributeOverrides({
+			@AttributeOverride(name = "city", column = @Column(name = "WORK_CITY")),
+			@AttributeOverride(name = "street", column = @Column(name = "WORK_STREET")),
+			@AttributeOverride(name = "zipcode", column = @Column(name = "WORK_ZIPCODE"))
+	})
+	private Address workAddress;
+
 	public Long getId() {
 		return id;
 	}
@@ -65,5 +79,21 @@ public class Member extends BaseEntity {
 
 	public void setMemberProducts(List<MemberProduct> memberProducts) {
 		this.memberProducts = memberProducts;
+	}
+
+	public Period getWorkPeriod() {
+		return workPeriod;
+	}
+
+	public void setWorkPeriod(Period workPeriod) {
+		this.workPeriod = workPeriod;
+	}
+
+	public Address getHomeAddress() {
+		return homeAddress;
+	}
+
+	public void setHomeAddress(Address homeAddress) {
+		this.homeAddress = homeAddress;
 	}
 }
