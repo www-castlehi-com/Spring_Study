@@ -20,7 +20,7 @@ public class TestService {
 		em.persist(team);
 
 		Member member = new Member();
-		member.setUsername("member");
+		member.setUsername("관리자");
 		member.setAge(10);
 		member.changeTeam(team);
 
@@ -29,12 +29,12 @@ public class TestService {
 		em.flush();
 		em.clear();
 
-		// String query = "select m from Member m inner join m.team t";
-		// String query = "select m from Member m left join m.team t";
-		String query = "select m from Member m, Team t where m.username = t.name";
-		List<Member> result = em.createQuery(query, Member.class)
-				.getResultList();
-
-		System.out.println("result.size() = " + result.size());
+		// String query = "select case when m.age <= 10 then '학생요금' when m.age >= 60 then '경로요금' else '일반요금' end from Member m";
+		// String query = "select coalesce(m.username, '이름 없는 회원') from Member m";
+		String query = "select nullif(m.username, '관리자') from Member m";
+		List<String> result = em.createQuery(query, String.class).getResultList();
+		for (String s : result) {
+			System.out.println("s = " + s);
+		}
 	}
 }
