@@ -15,26 +15,45 @@ public class TestService {
 
 	@Transactional
 	public void test() {
-		Team team = new Team();
-		team.setName("teamA");
-		em.persist(team);
+		Team teamA = new Team();
+		teamA.setName("팀A");
+		em.persist(teamA);
 
-		Member member = new Member();
-		member.setUsername("관리자");
-		member.setAge(10);
-		member.changeTeam(team);
+		Team teamB = new Team();
+		teamB.setName("팀B");
+		em.persist(teamB);
 
-		em.persist(member);
+		Member member1 = new Member();
+		member1.setUsername("회원1");
+		member1.changeTeam(teamA);
+		em.persist(member1);
+
+		Member member2 = new Member();
+		member2.setUsername("회원2");
+		member2.changeTeam(teamA);
+		em.persist(member2);
+
+		Member member3 = new Member();
+		member3.setUsername("회원3");
+		member3.changeTeam(teamB);
+		em.persist(member3);
 
 		em.flush();
 		em.clear();
 
-		// String query = "select case when m.age <= 10 then '학생요금' when m.age >= 60 then '경로요금' else '일반요금' end from Member m";
-		// String query = "select coalesce(m.username, '이름 없는 회원') from Member m";
-		String query = "select nullif(m.username, '관리자') from Member m";
-		List<String> result = em.createQuery(query, String.class).getResultList();
-		for (String s : result) {
-			System.out.println("s = " + s);
+		// String query = "select m from Member m join fetch m.team";
+		// List<Member> result = em.createQuery(query, Member.class)
+		// 		.getResultList();
+		//
+		// for (Member member : result) {
+		// 	System.out.println("member = " + member.getUsername() + ", " + member.getTeam().getName());
+		// }
+
+		String query = "select t from Team t join fetch t.members";
+		List<Team> teams = em.createQuery(query, Team.class).getResultList();
+
+		for (Team team : teams) {
+			System.out.println("team = " + team.getName() + ", " + team.getMembers().size());
 		}
 	}
 }
