@@ -41,19 +41,12 @@ public class TestService {
 		em.flush();
 		em.clear();
 
-		// String query = "select m from Member m join fetch m.team";
-		// List<Member> result = em.createQuery(query, Member.class)
-		// 		.getResultList();
-		//
-		// for (Member member : result) {
-		// 	System.out.println("member = " + member.getUsername() + ", " + member.getTeam().getName());
-		// }
+		List<Member> result = em.createNamedQuery("Member.findByUsername", Member.class)
+				.setParameter("username", "회원1")
+				.getResultList();
 
-		String query = "select t from Team t join fetch t.members";
-		List<Team> teams = em.createQuery(query, Team.class).getResultList();
-
-		for (Team team : teams) {
-			System.out.println("team = " + team.getName() + ", " + team.getMembers().size());
+		for (Member member : result) {
+			System.out.println("member.getUsername() = " + member.getUsername());
 		}
 	}
 }
