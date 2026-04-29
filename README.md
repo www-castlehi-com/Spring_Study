@@ -32,3 +32,13 @@
 ### [JPA Basic](https://github.com/www-castlehi-com/Spring_Study/tree/master/JPA_Basic)
 - 인프런 : https://www.inflearn.com/course/ORM-JPA-Basic
 - 정리 : https://github.com/www-castlehi-com/CS/tree/main/Spring/JPA-Basic
+### JPA UTILIZE1
+- 인프런 : https://www.inflearn.com/course/스프링부트-JPA-활용-1
+- 정리 : https://github.com/www-castlehi-com/Spring_Study/tree/master/Data/spring-boot-and-jpa-utilize1
+### JPA UTILIZE2
+- 인프런 : https://www.inflearn.com/course/스프링부트-JPA-활용-2
+- 정리 : https://github.com/www-castlehi-com/Spring_Study/tree/master/Data/spring-boot-and-jpa-utilize1
+## 대규모 트래픽 처리를 위한 성능 최적화
+### 비전공자도 이해할 수 있는 Redis 입문/실전(조회 성능 최적화편)
+- 인프런 : https://www.inflearn.com/course/비전공자-redis-입문-성능-최적화
+- 정리 : https://github.com/www-castlehi-com/Spring_Study/tree/master/Data/redis-introduction-practice
