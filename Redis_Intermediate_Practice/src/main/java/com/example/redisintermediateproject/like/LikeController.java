@@ -11,12 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/likes")
 public class LikeController {
 
-    private final LikeService likeService;
+	private final LikeService likeService;
 
-    @PostMapping()
-    public void likePost(
-        @RequestBody LikePostRequestDto likePostRequestDto
-    ) {
-        likeService.likePost(likePostRequestDto);
-    }
+	@PostMapping()
+	public void likePost(
+			@RequestBody LikePostRequestDto likePostRequestDto
+	) {
+		likeService.likePost(likePostRequestDto);
+	}
+
+	@PostMapping("/redis")
+	public void likePostWithRedis(
+			@RequestBody LikePostRequestDto likePostRequestDto
+	) {
+        likeService.likePostWithRedis(likePostRequestDto);
+	}
 }
