@@ -13,15 +13,25 @@ import java.util.List;
 @RequestMapping("/search")
 public class SearchController {
 
-    private final SearchService searchService;
+	private final SearchService searchService;
 
-    @GetMapping()
-    public void search(@RequestParam String keyword) {
-        searchService.search(keyword);
-    }
+	@GetMapping()
+	public void search(@RequestParam String keyword) {
+		searchService.search(keyword);
+	}
 
-    @GetMapping("/top10")
-    public List<String> getTop10Keywords() {
-        return searchService.getTop10Keywords();
-    }
+	@GetMapping("/top10")
+	public List<String> getTop10Keywords() {
+		return searchService.getTop10Keywords();
+	}
+
+	@GetMapping("/redis")
+	public void searchWithRedis(@RequestParam String keyword) {
+		searchService.searchWithRedis(keyword);
+	}
+
+	@GetMapping("/top10/redis")
+	public List<String> getTop10RedisKeywords() {
+		return searchService.getTop10KeywordsWithRedis();
+	}
 }
