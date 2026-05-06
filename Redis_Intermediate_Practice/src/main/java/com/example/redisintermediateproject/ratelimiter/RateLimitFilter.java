@@ -22,6 +22,7 @@ public class RateLimitFilter extends OncePerRequestFilter {
 			IOException {
 		String userId = request.getHeader("USER-ID");
 		if (userId == null) {
+			filterChain.doFilter(request, response);
 			return;
 		}
 

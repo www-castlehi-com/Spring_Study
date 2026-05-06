@@ -1,29 +1,46 @@
 package com.example.redisintermediateproject.dau;
 
-import java.time.LocalDate;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
 public class DailyActiveUserService {
 
-  private final DailyActiveUserRepository dailyActiveUserRepository;
+	private final DailyActiveUserRepository dailyActiveUserRepository;
+	private final RedisTemplate<String, String> redisTemplate;
 
-  @Transactional
-  public void recordActiveUser(Long userId) {
-    LocalDate today = LocalDate.now();
-    // 이미 활동 기록이 있는 유저라면 저장하지 않는다.
-    if (!dailyActiveUserRepository.existsByUserIdAndActiveDate(userId, today)) {
-      // 활동 기록 저장
-      dailyActiveUserRepository.save(new DailyActiveUser(userId, today));
-    }
-  }
+	@Transactional
+	public void recordActiveUser(Long userId) {
+		LocalDate today = LocalDate.now();
+		// 이미 활동 기록이 있는 유저라면 저장하지 않는다.
+		if (!dailyActiveUserRepository.existsByUserIdAndActiveDate(userId, today)) {
+			// 활동 기록 저장
+			dailyActiveUserRepository.save(new DailyActiveUser(userId, today));
+		}
+	}
 
-  @Transactional(readOnly = true)
-  public long getDau(LocalDate date) {
-    // 특정 날짜의 DAU를 SQL문의 COUNT를 활용해 계산
-    return dailyActiveUserRepository.countByActiveDate(date);
-  }
+	@Transactional(readOnly = true)
+	public long getDau(LocalDate date) {
+		// 특정 날짜의 DAU를 SQL문의 COUNT를 활용해 계산
+		return dailyActiveUserRepository.countByActiveDate(date);
+	}
+
+	public void recordActiveUserWithRedis(Long userId) {
+		LocalDate today = LocalDate.now();
+		String key = "dau:" + today;
+		redisTemplate.opsForSet().add(key, userId.toString());
+	}
+
+	public long getDauWithRedis(LocalDate date) {
+		String key = "dau:" + date;
+
+		return redisTemplate.opsForSet()
+				.size(key);
+	}
 }
