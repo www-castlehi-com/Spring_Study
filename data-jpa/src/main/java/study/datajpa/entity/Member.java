@@ -1,10 +1,7 @@
 package study.datajpa.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Getter
@@ -21,6 +18,7 @@ public class Member {
 	@Column(name = "member_id")
 	private Long id;
 
+	@Setter
 	private String username;
 
 	private int age;
